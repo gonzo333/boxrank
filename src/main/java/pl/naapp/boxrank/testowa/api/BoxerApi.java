@@ -22,4 +22,9 @@ public class BoxerApi {
     public Iterable<Boxer> getAll() {
         return boxerPort.getAll();
     }
+
+    @GetMapping("/test")
+    public String test() {
+        return "it's work!";
+    }
 }
