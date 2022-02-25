@@ -22,4 +22,5 @@ public class Boxer {
     private Integer wins;
     private Integer losses;
     private Integer draws;
+    private Double points;
 }
