@@ -6,6 +6,7 @@ import pl.naapp.boxrank.testowa.repo.BoxerRepo;
 import pl.naapp.boxrank.testowa.repo.entity.Boxer;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
 public class BoxerPort {
@@ -30,4 +31,10 @@ public class BoxerPort {
         ArrayList<Boxer> rankProfMan = (ArrayList<Boxer>) rankProfManRepo.findOlimpicMan();
         return rankProfMan;
     }
+
+    public Boxer getBoxerDetail(String id) {
+        Optional<Boxer> boxerDetail = rankProfManRepo.findById(Long.getLong(id));
+        return boxerDetail.get();
+    }
+
 }

@@ -1,10 +1,7 @@
 package pl.naapp.boxrank.testowa.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.naapp.boxrank.testowa.port.BoxerPort;
 import pl.naapp.boxrank.testowa.repo.entity.Boxer;
 
@@ -42,6 +39,12 @@ public class BoxerApi {
         ArrayList<Boxer> rankProfManArray = boxerPort.getAllOlimpMan();
         rankProfManArray.sort(Comparator.comparing(rankProfMan -> rankProfMan.getPlace()));
         return rankProfManArray;
+    }
+
+    @CrossOrigin
+    @GetMapping("/boxer-detail")
+    public Boxer getBoxerDetailData(@RequestParam String id) {
+        return boxerPort.getBoxerDetail(id);
     }
 
     @CrossOrigin
