@@ -33,7 +33,7 @@ public class BoxerPort {
     }
 
     public Boxer getBoxerDetail(String id) {
-        Optional<Boxer> boxerDetail = rankProfManRepo.findById(Long.getLong(id));
+        Optional<Boxer> boxerDetail = rankProfManRepo.findById(Long.parseLong(id));
         return boxerDetail.get();
     }
 
