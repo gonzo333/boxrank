@@ -20,6 +20,8 @@ public class Boxer {
     private String category;
     private String sex;
     private String kind;
+    private String photo_face_uri;
+    private String photo_body_uri;
 
     public Long getId() {
         return id;
@@ -107,5 +109,21 @@ public class Boxer {
 
     public void setKind(String kind) {
         this.kind = kind;
+    }
+
+    public String getPhoto_face_uri() {
+        return photo_face_uri;
+    }
+
+    public void setPhoto_face_uri(String photo_face_uri) {
+        this.photo_face_uri = photo_face_uri;
+    }
+
+    public String getPhoto_body_uri() {
+        return photo_body_uri;
+    }
+
+    public void setPhoto_body_uri(String photo_body_uri) {
+        this.photo_body_uri = photo_body_uri;
     }
 }
