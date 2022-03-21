@@ -22,6 +22,10 @@ public class Boxer {
     private String kind;
     private String photo_face_uri;
     private String photo_body_uri;
+    private String club;
+    private String birthday;
+    private Integer weight;
+    private Integer height;
 
     public Long getId() {
         return id;
@@ -125,5 +129,37 @@ public class Boxer {
 
     public void setPhoto_body_uri(String photo_body_uri) {
         this.photo_body_uri = photo_body_uri;
+    }
+
+    public String getClub() {
+        return club;
+    }
+
+    public void setClub(String club) {
+        this.club = club;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public Integer getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Integer weight) {
+        this.weight = weight;
+    }
+
+    public Integer getHeight() {
+        return height;
+    }
+
+    public void setHeight(Integer height) {
+        this.height = height;
     }
 }
